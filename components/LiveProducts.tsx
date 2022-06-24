@@ -49,9 +49,11 @@ const LiveProducts: React.FC<Props> = ({ liveId, onClick, products }) => {
 						})}
 					</div>
 
-					<span className="px-2 py-1 mx-auto font-extrabold text-red-600 border border-red-600 rounded-md text-red">
-						LIVE
-					</span>
+					{product.id === liveProductId && (
+						<span className="px-2 py-1 mx-auto font-extrabold text-red-600 border border-red-600 rounded-md text-red">
+							LIVE
+						</span>
+					)}
 				</div>
 			))}
 		</div>
