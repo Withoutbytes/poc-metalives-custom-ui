@@ -106,7 +106,7 @@ const LiveChat: React.FC<Props> = ({ liveId }) => {
 		<div>
 			<span className="overflow-y-hidden max-h-[1px] bg-black bg-opacity-50">
 				{chatMessages
-					.filter((v, i) => i < 10)
+					.filter((v, i) => i > chatMessages.length - 10)
 					.map((message) => (
 						<div key={message.id}>
 							<span>{message.name}: </span>
