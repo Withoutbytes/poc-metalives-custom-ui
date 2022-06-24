@@ -1,7 +1,7 @@
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import { useCallback, useEffect, useState } from "react";
-import { useList } from "react-use";
 import * as LiveByAliasType from "types/LiveByAliasType";
+import Image from "next/image";
 
 interface Props {
 	liveId: number;
@@ -39,7 +39,7 @@ const LiveProducts: React.FC<Props> = ({ liveId, onClick, products }) => {
 			{products.map((product) => (
 				<div className="w-16 h-16 mx-4 my-12" onClick={() => onClick && onClick(product.id)} key={product.id}>
 					<div>
-						<img src={product.imageUrl} alt={product.name} height={64} width="100%" />
+						<Image src={product.imageUrl} alt={product.name} height={64} />
 					</div>
 					<div className="font-bold ">
 						{product.price.toLocaleString("pt-BR", {
