@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
 	return (
 		<Layout>
-			<h1>POC metalioves</h1>
+			{/* <h1>POC metalioves</h1> */}
 			{liveError && <p className="text-red-600">Error: {liveError.message}</p>}
 			{live ? (
 				<div className="relative font-semibold text-sky-600">
@@ -56,7 +56,6 @@ const Home: NextPage = () => {
 							controls={false}
 							playsInline={true}
 							width="100%"
-							height="100vh"
 							playerRef={playerRef}
 							muted={true}
 						/>
