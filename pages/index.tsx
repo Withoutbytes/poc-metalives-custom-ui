@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 					</div>
 
 					{/* products */}
-					<div className="absolute left-0 z-30">
+					<div className="absolute right-0 z-30">
 						<LiveProducts liveId={live.id} products={live.products} />
 					</div>
 
@@ -48,17 +48,18 @@ const Home: NextPage = () => {
 					)}
 
 					{/* player */}
-					<div className="h-full bg-slate-800">
-						<ReactHlsPlayer
-							// src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
-							src={live.streamUrl}
-							autoPlay={true}
-							controls={false}
-							playsInline={true}
-							width="100%"
-							playerRef={playerRef}
-							muted={true}
-						/>
+					<div className="flex justify-center h-screen bg-slate-800">
+						<div className="mx-auto">
+							<ReactHlsPlayer
+								// src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+								src={live.streamUrl}
+								autoPlay={true}
+								controls={false}
+								playsInline={true}
+								playerRef={playerRef}
+								muted={true}
+							/>
+						</div>
 					</div>
 				</div>
 			) : (

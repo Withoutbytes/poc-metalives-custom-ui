@@ -35,13 +35,13 @@ const LiveProducts: React.FC<Props> = ({ liveId, onClick, products }) => {
 	});
 
 	return (
-		<div className="grid grid-cols-7 gap-4">
+		<div className="grid grid-cols-7">
 			{products.map((product) => (
-				<div className="w-16 h-16" onClick={() => onClick && onClick(product.id)} key={product.id}>
+				<div className="w-16 h-16 mx-4 my-12" onClick={() => onClick && onClick(product.id)} key={product.id}>
 					<div>
 						<img src={product.imageUrl} alt={product.name} height={64} width="100%" />
 					</div>
-					<div className="text-lg font-bold">
+					<div className="font-bold ">
 						{product.price.toLocaleString("pt-BR", {
 							currency: "BRL",
 							style: "currency",
