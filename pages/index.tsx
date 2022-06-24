@@ -50,8 +50,8 @@ const Home: NextPage = () => {
 					{/* player */}
 					<div className="h-full bg-slate-800">
 						<ReactHlsPlayer
-							src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
-							// src={live.streamUrl}
+							// src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+							src={live.streamUrl}
 							autoPlay={true}
 							controls={false}
 							playsInline={true}
